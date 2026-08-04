@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Match - Train Your Brain!</title>
-    
+
     <link rel="stylesheet" href="styles.css">
-    
+
     <script src="script.js"></script>
 </head>
+
 <body>
 
     <!-- Main Navigation Header -->
@@ -28,7 +30,7 @@
 
     <!-- Main Content Area -->
     <main>
-        
+
         <!-- Hero Section: Welcoming the Primary Students -->
         <section class="hero-section">
             <div class="hero-content">
@@ -46,18 +48,21 @@
             <h2>How to Play</h2>
             <div class="cards">
                 <div class="card-feature">
-                    <img src="pictures/cardno.1.jpg" alt="Flip Card Icon">
+
                     <h3>1. Pick & Flip</h3>
+                    <img src="pictures/cardno.1.jpg" alt="Flip Card Icon">
                     <p>Click on any face-down card to reveal the hidden image beneath.</p>
                 </div>
                 <div class="card-feature">
-                    <img src="pictures/cardno.2.jpg" alt="Match Cards Icon">
+
                     <h3>2. Find Matches</h3>
+                    <img src="pictures/cardno.2.jpg" alt="Match Cards Icon">
                     <p>Find a second card with the exact same logo to make a matching pair!</p>
                 </div>
                 <div class="card-feature">
-                    <img src="pictures/cardno.3.jpg" alt="Trophy Icon">
+
                     <h3>3. Clear the Board</h3>
+                    <img src="pictures/cardno.3.jpg" alt="Trophy Icon">
                     <p>Remember card positions to match every pair and set a high score!</p>
                 </div>
             </div>
@@ -67,17 +72,12 @@
         <section class="player-setup-section">
             <h2>Player Setup</h2>
             <p>Enter your details below to save your profile before starting your game session!</p>
-            
+
             <form id="player-form" novalidate>
                 <div class="form-group">
                     <label for="player-name">Student Name:</label>
-                    <input 
-                        type="text" 
-                        id="player-name" 
-                        name="playerName" 
-                        placeholder="Enter your name (e.g. Alex)" 
-                        required
-                    >
+                    <input type="text" id="player-name" name="playerName" placeholder="Enter your name (e.g. Alex)"
+                        required>
                     <span class="error-message" id="name-error"></span>
                 </div>
 
@@ -105,4 +105,5 @@
     </footer>
 
 </body>
+
 </html>

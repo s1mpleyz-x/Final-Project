@@ -1,6 +1,7 @@
 // ------------------------------ CARD CLICK EVENT HANDLER ------------------------------ \\
 
 const cards = document.querySelectorAll(".card");
+const restartButton = document.getElementById("restartBtn");
 
 cards.forEach(card => {
     card.addEventListener("click", function(event) {

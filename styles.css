@@ -28,4 +28,5 @@
     
     background-color: var(--card-color);
     padding: 40px;
+    cursor: pointer;
 }

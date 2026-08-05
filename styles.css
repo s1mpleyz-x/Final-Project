@@ -1,0 +1,31 @@
+/* =============== CENTRAL CSS STYLING & DISPLAY =============== */
+
+:root {
+    /* Website Colors */
+    --card-color:                                 #dbcb3c;
+}
+
+/* --------------- HERO HEADER STYLING & DISPLAY -------------- */
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --------------- CARD BOARD STYLING & DISPLAY --------------- */
+
+.card-board {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.card {
+    margin: 0 40px 40px 0;
+    text-align: center;
+    text-decoration: none;
+    
+    background-color: var(--card-color);
+    padding: 40px;
+}

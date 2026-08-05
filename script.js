@@ -1,6 +1,6 @@
-// ------------------------------ CARD CLICK EVENT HANDLER ------------------------------ \\
+// ------------------------------ FUNCTIONS SECTION ------------------------------ \\
 
-const cards = document.querySelectorAll(".card");
+// Function to check for card validity
 
 let firstCard = null; // Variables to store card click events
 let secondCard = null;
@@ -33,6 +33,10 @@ function cardMatching(card) {
     firstCard = null; // Resetting the variables after each check
     secondCard = null;
 }
+
+// ------------------------------ CARD CLICK EVENT HANDLER ------------------------------ \\
+
+const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
     card.addEventListener("click", function(event) {

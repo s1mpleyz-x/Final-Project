@@ -48,13 +48,3 @@ cards.forEach(card => {
         cardMatching(event.currentTarget); // The card clicked will become the argument for the function checking for matching cards
     })
 })
-
-// ------------------------------ RESTART BUTTON EVENT HANDLER ------------------------------ \\
-
-const restartButton = document.getElementById("restartBtn");
-
-restartButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    console.log("Restart button was clicked!");
-
-})

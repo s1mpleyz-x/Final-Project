@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Memory Match - Train Your Brain!</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <p>Final Project</p>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <div class="logo">
+            <img src="pictures/card.no1.jpg" alt="Memory Card Game Logo" class="site-logo">
+            <h1>Memory Match</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="game.html">Play Game</a></li>
+                <li><a href="portfolio.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Hero Section: Welcoming the Primary Students -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Boost Your Brainpower with Memory Match!</h2>
+                <p>Welcome, young learners! Test your focus, train your memory, and match all the pairs to win.</p>
+                <a href="game.html" class="btn-primary">Start Playing Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="pictures/card.no3.jpg" alt="Children playing memory card game">
+            </div>
+        </section>
+
+        <!--How-To-Play Section -->
+        <section class="how-to-play">
+            <h2>How to Play</h2>
+            <div class="cards">
+                <div class="card-feature">
+
+                    <h3>1. Pick & Flip</h3>
+                    <img src="pictures/card.no5.jpg" alt="Flip Card Icon">
+                    <p>Click on any face-down card to reveal the hidden image beneath.</p>
+                </div>
+                <div class="card-feature">
+
+                    <h3>2. Find Matches</h3>
+                    <img src="pictures/cardno.2.jpg" alt="Match Cards Icon">
+                    <p>Find a second card with the exact same logo to make a matching pair!</p>
+                </div>
+                <div class="card-feature">
+
+                    <h3>3. Clear the Board</h3>
+                    <img src="pictures/card.no4.jpg" alt="Trophy Icon">
+                    <p>Remember card positions to match every pair and set a high score!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section: User Setup -->
+        <section class="player-setup-section">
+            <h2>Player Setup</h2>
+            <p>Enter your details below to save your profile before starting your game session!</p>
+
+            <form id="player-form">
+                <div class="form-group">
+                    <label for="player-name">Student Name:</label>
+                    <input type="text" id="player-name" name="playerName" placeholder="Enter your name (e.g. Alex)"
+                        required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty-level">Select Difficulty Level:</label>
+                    <select id="difficulty-level" name="difficulty">
+                        <option value="easy">Easy (4 Pairs - 8 Cards)</option>
+                        <option value="medium" selected>Medium (6 Pairs - 12 Cards)</option>
+                        <option value="hard">Hard (8 Pairs - 16 Cards)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Save & Go to Game</button>
+            </form>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Memory Match Team | Educational Game for Primary School Students</p>
+        <p>Built with HTML, CSS, and JavaScript</p>
+    </footer>
+
 </body>
+
 </html>

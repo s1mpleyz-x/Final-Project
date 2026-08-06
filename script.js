@@ -28,6 +28,26 @@ function keepFlipped(card1, card2) {
   card1.style.pointerEvents = 'none';
   card2.style.pointerEvents = 'none';
 }
+// ------------------------------ EVENT HANDLERS SECTION ------------------------------ \\
+ 
+// Get all cards from the board
+const cards = document.querySelectorAll('.card');
+ 
+// Add click listener to each card
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Check if card is already flipped or matched (to avoid double-clicking)
+    if (card.classList.contains('flipped') || card.classList.contains('matched')) {
+      return; // Do nothing if already flipped or matched
+    }
+    
+    // ADD FLIP ANIMATION: Add 'flipped' class to show the logo
+    card.classList.add('flipped');
+    
+    // Call the matching function to check if this card matches another
+    cardMatching(card);
+  });
+});
 // ------------------------------ FUNCTIONS SECTION ------------------------------ \\
 
 // Function to check for card validity

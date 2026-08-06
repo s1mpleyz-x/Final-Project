@@ -32,17 +32,19 @@ function keepFlipped(card1, card2) {
   checkIfGameEnded();
 }
 // ------------------------------ EVENT HANDLERS SECTION ------------------------------ \\
- 
+
 // Get all cards from the board
 const cards = document.querySelectorAll('.card');
-let moves = document.querySelector('.moves');
+let moves = document.querySelector('#moves');
+let finalMoves = document.querySelector('#finalMoves');
 let moveCounter = 0;
- 
+
 // Add click listener to each card
 cards.forEach(card => {
   card.addEventListener('click', () => {
     moveCounter++
     moves.textContent = moveCounter;
+    finalMoves.textContent = moveCounter;
     // Check if card is already flipped or matched (to avoid double-clicking)
     if (card.classList.contains('flipped') || card.classList.contains('matched')) {
       return; // Do nothing if already flipped or matched
@@ -55,7 +57,8 @@ cards.forEach(card => {
     cardMatching(card);
   })
 });
-// ------------------------------ NEW: ENDING SCREEN FUNCTIONS ------------------------------ \\
+
+// ------------------------------ ENDING SCREEN FUNCTIONS ------------------------------ \\
 
 // Function to check if all cards are matched
 function checkIfGameEnded() {
@@ -64,6 +67,7 @@ function checkIfGameEnded() {
   
   // If all cards are matched, show ending screen
   if (allCards.length === matchedCards.length) {
+    moveCounter = 0;
     showEndingScreen();
   }
 }
@@ -87,7 +91,7 @@ function hideEndingScreen() {
 }
 
 
-// ------------------------------ NEW: RESTART GAME FUNCTION ------------------------------ \\
+// ------------------------------ RESTART GAME FUNCTION ------------------------------ \\
 
 function restartGame() {
   // Hide the ending screen
@@ -95,6 +99,7 @@ function restartGame() {
   
   // Reset moves counter
   document.getElementById('moves').textContent = '0';
+  moveCounter = 0;
   
   // Reset all cards - remove .flipped and .matched classes
   const allCards = document.querySelectorAll('.card');
@@ -133,10 +138,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-  // NEW: Add click listener to restart button (header)
+  // Add click listener to restart button (header)
   document.getElementById('restartBtn').addEventListener('click', restartGame);
   
-  // NEW: Add click listener to restart button (ending screen)
+  // Add click listener to restart button (ending screen)
   document.getElementById('endingRestartBtn').addEventListener('click', restartGame);
 });
 

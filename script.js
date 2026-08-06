@@ -32,10 +32,14 @@ function keepFlipped(card1, card2) {
  
 // Get all cards from the board
 const cards = document.querySelectorAll('.card');
+let moves = document.querySelector('.moves');
+let moveCounter = 0;
  
 // Add click listener to each card
 cards.forEach(card => {
   card.addEventListener('click', () => {
+    moveCounter++
+    moves.textContent = moveCounter;
     // Check if card is already flipped or matched (to avoid double-clicking)
     if (card.classList.contains('flipped') || card.classList.contains('matched')) {
       return; // Do nothing if already flipped or matched

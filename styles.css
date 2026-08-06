@@ -1,0 +1,590 @@
+/* ===== MEMORY MATCH GAME - STYLESHEET ===== */
+/* Styles for index.html, game.html, and portfolio.html */
+
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styling - light background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Navigation styling */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  border-bottom: 2px solid white;
+}
+
+nav a.active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ===== HERO SECTION (index.html & portfolio.html) ===== */
+.hero-section,
+.hero {
+  background: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hero-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-content h2,
+.hero h2 {
+  color: #667eea;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p,
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary,
+.btn-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover,
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active,
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ===== HOW-TO-PLAY SECTION (index.html) ===== */
+.how-to-play {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.how-to-play h2 {
+  text-align: center;
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* Container for feature cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Individual feature cards */
+.card-feature {
+  background: #f8f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 4px solid #667eea;
+}
+
+.card-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.card-feature h3 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.card-feature img {
+  width: 100%;
+  max-width: 150px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.card-feature p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ===== PLAYER SETUP FORM (index.html) ===== */
+.player-setup-section {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.player-setup-section h2 {
+  text-align: center;
+  color: #667eea;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.player-setup-section > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ===== GAME PAGE (game.html) ===== */
+
+/* Page wrapper - centers game board */
+.page-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Game header with moves counter and restart button */
+.hero-header {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hero-header h1 {
+  color: #667eea;
+  font-size: 1.8rem;
+}
+
+.hero-header p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hero-header #moves {
+  font-weight: bold;
+  color: #764ba2;
+}
+
+#restartBtn {
+  background: #e74c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#restartBtn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Card board - grid layout */
+.card-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 3D CARD FLIP ANIMATION ===== */
+
+/* Main card container */
+.card {
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.2s;
+}
+
+/* Hover effect - slight scale up */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Inner wrapper - this is what rotates */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* When .flipped class is added, rotate 180 degrees */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces of the card */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Front face - blank side (shown at start) */
+.card-front {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Back face - logo side (shown when flipped) */
+.card-back {
+  background: #f0f0f0;
+  transform: rotateY(180deg);
+  border: 2px solid #ddd;
+}
+
+/* Matched card styling - green glow */
+.card.matched .card-back {
+  background: linear-gradient(135deg, #90EE90 0%, #7CCD7C 100%);
+  box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3);
+  border-color: #5BB65B;
+}
+
+/* Prevent clicking on matched cards */
+.card.matched {
+  pointer-events: none;
+  cursor: default;
+}
+
+/* Shake animation for non-matching cards */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* Apply shake effect when .no-match class is added */
+.card.no-match {
+  animation: shake 0.4s;
+}
+
+/* ===== PORTFOLIO PAGE (portfolio.html) ===== */
+
+/* Team container - grid of developer cards */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Individual team member card */
+.team-container .card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+  aspect-ratio: auto; /* Override game card aspect ratio */
+  perspective: none;
+}
+
+.team-container .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+}
+
+.team-container .card h3 {
+  color: #667eea;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.team-container .card h4 {
+  color: #764ba2;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.team-container .card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  .card-board {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .card-board {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 0 10px;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
+/* Ending screen styling */
+.ending-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ending-screen.hidden {
+  display: none;
+}
+
+.ending-content {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.ending-content h2 {
+  color: #667eea;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.ending-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#finalMoves {
+  font-weight: bold;
+  color: #764ba2;
+}
+
+.ending-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ending-buttons a,
+.ending-buttons button {
+  text-decoration: none;
+}

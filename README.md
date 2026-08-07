@@ -32,4 +32,6 @@
 [MIT License](LICENSE)
 
 ## Showcase of the project
-![App Screenshot](./pictures/app-screenshot.png)
+![App Screenshot](./pictures/home-page-screenshot.png)
+![App Screenshot](./pictures/game-page-screenshot.png)
+![App Screenshot](./pictures/portfolio-page-screenshot.png)
